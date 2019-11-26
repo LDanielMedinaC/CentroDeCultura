@@ -1,0 +1,166 @@
+@import '../../../variables.scss';
+@import '../../../assets/fonts.scss';
+
+// Styles for section previews
+.preview:nth-child(odd) {
+    background-color: rgb(240, 240, 240);
+}
+
+app-services-preview {
+    background:
+        linear-gradient(
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
+        ),
+        url('https://www.umary.edu/_resources/images/heros/1600x600_social-work_counseling_banner.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.responsive-video-container {
+    margin-bottom: 34px;
+}
+
+.history-container{
+    box-sizing: border-box;
+    padding: 0 40px;
+    margin: 0 auto;
+    max-width: $content-width;
+    text-align: center;
+    align-content: center;
+}
+
+.history-card{
+    box-shadow: 0 0 0;
+    background-color: #FCCEA2;
+    max-width: $content-width *.4;
+}
+
+.history-title{
+    font-size: 16px;
+    text-align: center;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.25em;
+    font-weight: 400;
+    color: #363636;
+}
+
+.history-description {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    word-wrap: break-word;
+    color: rgb(70, 70, 70);
+}
+
+.history-banner-container {
+    width: calc(100% + 60px);
+    position: relative;
+    height: 0;
+    padding-top: 76%;
+    margin: 0 -30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+
+.info-container{
+    box-sizing: border-box;
+    padding: 0 40px;
+    margin: 0 auto;
+    max-width: $content-width;
+    text-align: center;
+    align-content: center;
+}
+
+.card {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.bg{
+    background-color: #efb810;
+}
+
+
+.event-details {
+    margin: auto 0;
+    margin-top: 8px;
+}
+
+.event-title {
+    font-size: 16px;
+    text-align: left;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.25em;
+    font-weight: 400;
+    color: #363636;
+}
+
+.info-title{
+    font-size: 16px;
+    text-align: center;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.25em;
+    font-weight: 400;
+    color: #363636;
+}
+
+.info-description {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    word-wrap: break-word;
+    color: rgb(70, 70, 70);
+}
+
+.banner-container {
+    width: calc(100% + 60px);
+    position: relative;
+    height: 0;
+    padding-top: 76%;
+    margin: 0 -30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+
+.event-banner {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    -webkit-user-drag: none;
+}
+
+.event-hotlink {
+    display: inline-block;
+    background-color: #2882b4;
+    padding: 7px 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 300;
+    color: white;
+
+    cursor: pointer;
+}
+
+.event-hotlink:hover {
+    background-color: #0a9be9;
+}
+
+.deck {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+app-gathering-card {
+    flex: 0 1 0;
+}

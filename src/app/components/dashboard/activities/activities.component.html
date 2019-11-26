@@ -1,0 +1,50 @@
+
+<div class="info-container" class='general'>
+    <div class = 'deck'>
+        <div class="card bg" >
+            <div class='info-title'>
+                <h2 class="info-title">Nombre</h2>
+                <input class='input-text' type='text' [(ngModel)]='name' value="name">
+            </div>
+            <div class="info-description">
+                <h2 class="info-title">Descripción</h2>
+                <textarea class='input-text' [(ngModel)]='description' rows='6' cols ='20'>
+                    {{description}}
+                </textarea>
+            </div>
+            <div class="info-description">
+                <h2 class="info-title">Fecha</h2>
+                <input class='input-text' type='text' [(ngModel)]='date' value="date">
+            </div>
+            <div class="info-description">
+                <h2 class="info-title">Hora</h2>
+                <input class='input-text' type='text' [(ngModel)]='hour' value="hour">
+            </div> 
+            <input calss='input-text' type='file' (change)='saveFile($event.target.files)'>
+            <div class="info-description">
+                <button class="section-hotlink login-btn" (click)='createActivity()'>
+                    <span>Crear actividad</span>
+                </button>
+            </div>
+        </div>
+        <div class="card bg" *ngFor='let activity of activities'>
+            <div class='info-title'>
+                <h2 class="info-title">{{activity.nombre}}</h2>
+            </div>
+            <div class="banner-container">
+                <img class="event-banner no-select" src="{{ activity.img }}">
+            </div>
+            <div class="info-description">
+                <pre>{{activity.descripcion}}</pre>
+            </div>
+            <div class="info-description">
+                <p class="info-description">{{activity.fecha}} {{activity.hora}}</p>
+            </div>
+            <div class="info-description">
+                <button class="section-hotlink login-btn" (click)='deleteActivity(activity)'>
+                    <span>Eliminar actividad</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

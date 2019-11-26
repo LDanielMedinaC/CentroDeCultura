@@ -1,0 +1,22 @@
+
+<div class="info-container" class='general'>
+    <div class = 'deck'>
+        <div class="card bg" *ngFor='let activity of activities'>
+            <div class='info-title'>
+                <h2 class="info-title">{{activity.nombre}}</h2>
+            </div>
+            <div class="banner-container">
+                <img class="event-banner no-select" src="{{ activity.img }}">
+            </div>
+            <div class="info-description">
+                <pre>{{activity.descripcion}}</pre>
+            </div>
+            <div class="info-description">
+                <p class="info-description">{{activity.fecha}} {{activity.hora}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+    

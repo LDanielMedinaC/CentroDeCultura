@@ -1,0 +1,225 @@
+<div class='info-containder general'>
+    <div class = 'deck'>
+        <div class="card history-card">
+            <div class="history-title">
+                <select (change)="setField($event.target.value)">
+                    <option value='0'>--Campo--</option>
+                    <option *ngFor='let field of fields' value={{field.value}}>
+                        {{field.name}}
+                    </option>
+                </select>
+                <input type='file' (change)='saveFile($event.target.files)'>
+                <button class="section-hotlink" (click)='uploadImage()'>
+                    <span>Subir Imagen</span>
+                </button>
+                <div class='info-title' *ngIf='uploading'>
+                    <h2 class="info-title">Porcentaje: {{uploadPercent | async}}</h2>
+                    <h2 class="info-title">Porcentaje: {{url | async}}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class = 'history-conatiner' class = 'general' id='historia'>
+    <div class = 'deck'>
+        <div class="card history-card">
+            <div class="history-title">
+                <p class="info-description"><b>Eslogan</b></p>
+            </div>
+        </div>
+        <div class="card history-card">
+            <div class="history-title">
+                <input class='input-text' type='text' [(ngModel)]='lp.eslogan' value="lp.eslogan">
+            </div>
+        </div>
+    </div>
+    <div class = 'deck'>
+        <div class="card history-card">
+            <div class="history-title">
+                <p class="info-description"><b>Misión</b></p>
+            </div>
+        </div>
+        <div class="card history-card">
+            <div class="history-title">
+                    <textarea class='input-text' [(ngModel)]='lp.mision' rows="10" cols="50">
+                        {{lp.mision}}
+                    </textarea>
+            </div>
+        </div>
+    </div>
+    <div class = 'deck'>
+        <div class="card history-card">
+            <div class="history-title">
+                <p class="info-description"><b>Visión</b></p>
+            </div>
+        </div>
+        <div class="card history-card">
+            <div class="history-title">
+                    <textarea class='input-text' [(ngModel)]='lp.vision' rows="10" cols="50">
+                        {{lp.vision}}
+                    </textarea>
+            </div>
+        </div>
+    </div>
+    <div class = 'deck'>
+        <div class="card history-card">
+            <div class="history-title">
+                <p class="info-description"><b>Valores</b></p>
+            </div>
+        </div>
+        <div class="card history-card">
+            <div class="history-title">
+                    <textarea class='input-text' [(ngModel)]='lp.valores' rows="10" cols="50">
+                        {{lp.valores}}
+                    </textarea>
+            </div>
+        </div>
+    </div>
+    <div class = 'deck'>
+        <div class="card history-card">
+            <div class="history-title">
+                <p class="info-description"><b>Resumen 1</b></p>
+            </div>
+        </div>
+        <div class="card history-card">
+            <div class="history-title">
+                    <textarea class='input-text' [(ngModel)]='lp.resumen1' rows="10" cols="50">
+                        {{lp.resumen1}}
+                    </textarea>
+            </div>
+        </div>
+    </div>
+    <div class = 'deck'>
+        <div class="card history-card">
+            <div class="history-title">
+                <p class="info-description"><b>Resumen 2</b></p>
+            </div>
+        </div>
+        <div class="card history-card">
+            <div class="history-title">
+                    <textarea class='input-text' [(ngModel)]='lp.resumen2' rows="10" cols="50">
+                        {{lp.resumen2}}
+                    </textarea>
+            </div>
+        </div>
+    </div>
+    <div class = 'deck'>
+        <div class="card history-card">
+            <div class="history-title">
+                <p class="info-description"><b>Resumen 3</b></p>
+            </div>
+        </div>
+        <div class="card history-card">
+            <div class="history-title">
+                    <textarea class='input-text' [(ngModel)]='lp.resumen3' rows="10" cols="50">
+                        {{lp.resumen3}}
+                    </textarea>
+            </div>
+        </div>
+    </div>
+    <div class = 'deck'>
+        <div class="card history-card">
+            <div class="history-title">
+                <p class="info-description"><b>Resumen 4</b></p>
+            </div>
+        </div>
+        <div class="card history-card">
+            <div class="history-title">
+                    <textarea class='input-text' [(ngModel)]='lp.resumen4' rows="10" cols="50">
+                        {{lp.resumen4}}
+                    </textarea>
+            </div>
+        </div>
+    </div>
+    <div class = 'deck'>
+        <div class="card history-card">
+            <div class="history-title">
+                <p class="info-description"><b>Resumen 5</b></p>
+            </div>
+        </div>
+        <div class="card history-card">
+            <div class="history-title">
+                    <textarea class='input-text' [(ngModel)]='lp.resumen5' rows="10" cols="50">
+                        {{lp.resumen5}}
+                    </textarea>
+            </div>
+        </div>
+    </div>
+    <div class = 'deck'>
+        <div class="card social-card">
+            <div class="history-title">
+                <p class="info-description"><b>Facebook</b></p>
+            </div>
+        </div>
+        <div class="card social-card">
+            <div class="history-title">
+                    <input class='input-text' type='text' [(ngModel)]='lp.facebook' value="lp.facebook">
+            </div>
+        </div>
+        <div class="card social-card">
+            <div class="history-title">
+                    <input type='checkbox' [(ngModel)]='lp.facebookR'>
+            </div>
+        </div>
+    </div>
+    <div class = 'deck'>
+        <div class="card social-card">
+            <div class="history-title">
+                <p class="info-description"><b>Twitter</b></p>
+            </div>
+        </div>
+        <div class="card social-card">
+            <div class="history-title">
+                    <input class='input-text' type='text' [(ngModel)]='lp.twitter' value="lp.twitter">
+            </div>
+        </div>
+        <div class="card social-card">
+            <div class="history-title">
+                    <input type='checkbox' [(ngModel)]='lp.twitterR'>
+            </div>
+        </div>
+    </div>
+    <div class = 'deck'>
+        <div class="card social-card">
+            <div class="history-title">
+                <p class="info-description"><b>Instagram</b></p>
+            </div>
+        </div>
+        <div class="card social-card">
+            <div class="history-title">
+                    <input class='input-text' type='text' [(ngModel)]='lp.instagram' value="lp.instagram">
+            </div>
+        </div>
+        <div class="card social-card">
+            <div class="history-title">
+                    <input type='checkbox' [(ngModel)]='lp.instagramR'>
+            </div>
+        </div>
+    </div>
+    <div class = 'deck'>
+        <div class="card social-card">
+            <div class="history-title">
+                <p class="info-description"><b>Correo Electrónico</b></p>
+            </div>
+        </div>
+        <div class="card social-card">
+            <div class="history-title">
+                    <input class='input-text' type='text' [(ngModel)]='lp.email' value="lp.email">
+            </div>
+        </div>
+        <div class="card social-card">
+            <div class="history-title">
+                    <input type='checkbox' [(ngModel)]='lp.emailR'>
+            </div>
+        </div>
+    </div>
+    <div class = 'deck'>
+        <div class="card history-card">
+            <div class="info-description">
+                <button class="section-hotlink" (click)='updateLP()'>
+                    <span>Modificar página</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

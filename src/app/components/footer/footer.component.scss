@@ -1,0 +1,177 @@
+@import '../../../variables.scss';
+@import "../../../assets/color-palette.scss";
+
+#fold-container {
+    width: 100%;
+    max-width: $content-width;
+    margin: auto;
+}
+
+#footer-fold {
+    display: block;
+    background-color: rgb(50, 50, 50);
+    color: rgb(200, 200, 200);
+    font-size: 12px;
+    text-align: center;
+}
+
+#footer-fold span {
+    margin: auto;
+    line-height: 35px;
+    vertical-align: middle;
+}
+
+#footer-fold span::after {
+    content: "·";
+    padding: 0 10px;
+}
+
+footer a {
+    text-decoration: underline;
+    color: rgb(200, 200, 200);
+}
+
+#social-block {
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+    background-color: #9d2a17;
+}
+
+#social-block ul {
+    display: inline-block;
+    padding: 15px;
+    margin: auto;
+}
+
+.social-icon {
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+#messenger-icon {
+    display: block;
+}
+
+.footer-contact {
+	padding: 30px;
+    background-color: #9d2a17;
+}
+
+#location-block {
+	text-align: center;
+}
+
+#location-block span {
+	display: block;
+	color: rgb(200, 200, 200);
+	font-size: 15px;
+}
+
+#location-block a {
+	font-size: 11px;
+	color: white;
+}
+
+#location-icon {
+	vertical-align: middle;
+	width: 16px;
+	height: 16px;
+}
+
+p #location-label {
+	font-size: 12px;
+	color: rgb(150, 150, 150);
+}
+
+/*FOOTER NAVIGATION----------------------*/
+#footer-nav {
+    background-color: $color-deep-gray;
+    padding: 20px;
+}
+
+#footer-nav-list {
+    margin: 0;
+    padding-inline-start: 0;
+    text-align: center;
+}
+
+.footer-nav-category {
+    display: inline-block;
+    margin: 10px;
+    min-width: 100px;
+    vertical-align: top;
+}
+
+.category-list {
+    padding-inline-start: 0;
+}
+
+.footer-link {
+    font-size: 14px;
+    padding: 2px 0;
+    padding-inline-start: 2px;
+}
+
+.footer-link a:hover {
+    color: white;
+}
+
+.footer-link a.active-link {
+    cursor: default;
+    color: white;
+}
+
+.footer-category-title {
+    color:white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.category-list a {
+    text-decoration: none;
+}
+.servicios, .amistad, .iglesia, .digital {
+    margin-top: 50px;
+}
+
+.iglesia, .digital {
+    margin-bottom:50px;
+}
+
+/*Branding strip--------------*/
+#branding {
+    display: block;
+    box-sizing: border-box;
+    padding: 25px 20px;
+    margin: auto;
+    max-width: $content-width;
+    text-align: center;
+}
+
+#branding ul {
+    padding: 0;
+    margin: 0;
+}
+
+.brands-wrapper, .categories-wrapper {
+    display: inline-block;
+    text-align: left;
+}
+
+.branding-item {
+    display: inline-block;
+    margin: auto;
+    width: 135px;
+    height: 54px;
+    vertical-align: middle;
+}
+
+.branding-item img {
+    -webkit-user-drag: none;
+}

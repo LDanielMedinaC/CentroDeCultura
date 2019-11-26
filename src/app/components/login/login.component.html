@@ -1,0 +1,22 @@
+<div class="info-container" class='general'>
+    <div class = 'deck'>
+        <div class="card bg" >
+            <div class='info-title'>
+                <h2 class="info-title">Iniciar sesión</h2>
+            </div>
+            <div class="info-description">
+                <p class="info-description">Usuario</p>
+                <input class='input-text' type='text' [(ngModel)]='email'>
+            </div>
+            <div class="info-description">
+                <p class="info-description">Contraseña</p>
+                <input class='input-text' type='password' [(ngModel)]='pass' value='pass'>
+            </div>
+            <div class="info-description">
+                <a  class='button section-hotlink login-btn' (click)="logIn()">
+                    Iniciar Sesión
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

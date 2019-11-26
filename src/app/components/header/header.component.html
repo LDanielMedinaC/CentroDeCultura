@@ -1,0 +1,28 @@
+<header>
+    <div class="header-container">
+      <div class="logo-container no-select">
+        <a id="nav-logo-link" routerLink="/" (click)="closeMenu()" rel="home">
+            <img src='{{lp.logotipo}}'>
+        </a>
+      </div>
+  
+      <button class="hamburger hamburger--spin no-select" type="button" (click)="toggleMenu()" [ngClass]="{'is-active': menuIsOpen}">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+        
+        <nav id="menu-wrapper" [ngClass]="{'open': menuIsOpen}">
+          <span></span>
+          <ul>
+            <li class="nav-item no-select"><a routerLink="/" routerLinkActive="active-link" (click)="closeMenu()">Historia</a></li>
+            <li class="nav-item no-select"><a routerLink="/actividades" routerLinkActive="active-link" (click)="closeMenu()">Actividades</a></li>
+            <li class="nav-item no-select" *ngIf='isLogged'><a routerLink="/admin/actividades" routerLinkActive="active-link" (click)="closeMenu()">Administrar actividades</a></li>
+            <li class="nav-item no-select" *ngIf='isLogged'><a routerLink="/admin/pagina" routerLinkActive="active-link" (click)="closeMenu()">Administrar página</a></li>
+          </ul>
+        </nav>
+      
+    </div>
+  
+  </header>
+  

@@ -1,0 +1,28 @@
+<footer>  
+    <div class="footer-contact">
+      <div id="location-block">
+        <p>
+          <span>Contactanos</span>
+        </p>
+      </div>
+  
+      <div id="social-block">
+        <ul>
+          <li class="social-icon" *ngIf='lp.facebookR'><a href='https://{{lp.facebook}}' target='_blank'><i class="fab fa-facebook-f fa-lg"></i></a></li>
+          <li class="social-icon" *ngIf='lp.instagramR'><a href='https://{{lp.instagram}}' target='_blank'><i class="fab fa-instagram fa-lg"></i></a></li>
+          <li class="social-icon" *ngIf='lp.twitterR'><a href='https://{{lp.twitter}}' target='_blank'><i class="fab fa-twitter fa-lg"></i></a></li>
+          <li class="social-icon" *ngIf='lp.emailR'><a href='mailto:{{lp.email}}'><i class="far fa-envelope fa-lg"></i></a></li>
+        </ul>
+      </div>
+  
+    </div>
+  
+    <div id="footer-fold">
+      <div id="fold-container">
+        <span><abbr title="Copyright">©</abbr>Centro Cultural San Rafael Tlamanalco</span>
+        <a routerLink="/login" *ngIf='!isLogged'>Iniciar Sesión</a>
+        <a (click)='logOut()' *ngIf='isLogged'>Cerrar sesión</a>
+      </div>
+    </div>
+  
+</footer>
